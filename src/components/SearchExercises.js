@@ -25,6 +25,8 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
         'https://exercisedb.p.rapidapi.com/exercises',
         exerciseOptions
       );
+
+      
       const searchedExercises = exerciseData.filter(
         (exercise) =>
           exercise.name.toLowerCase().include(search) ||
@@ -35,6 +37,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
 
       setSearch('');
       setExercises(searchedExercises);
+      console.log(exerciseData);
     }
   };
 
@@ -67,7 +70,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
           type="text"
           value={search}
           onChange={(e) => {
-            setSearch(e.target.value.toLocaleLowerCase());
+            setSearch(e.target.value.toLowerCase());
           }}
           placeholder="Search Exercises"
         />

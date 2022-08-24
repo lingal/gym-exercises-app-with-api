@@ -29,13 +29,24 @@ const BodyPart = ({ exercise, setBodyPart, bodyPart }) => {
               gap: '47px'
             }
       }
+      onClick={() => {
+        setBodyPart(exercise);
+        window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' });
+      }}
     >
       <img
         src={Icon}
         alt="dumbbell"
-        styles={{ width: '40px', height: '40px' }}
+        style={{ width: '40px', height: '40px' }}
       />
-      <Typography>{exercise}</Typography>
+      <Typography
+        fontSize="24px"
+        fontWeight="bold"
+        color="#3a1212"
+        textTransform="capitalize"
+      >
+        {exercise}
+      </Typography>
     </Stack>
   );
 };

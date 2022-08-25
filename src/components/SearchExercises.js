@@ -16,7 +16,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
       );
       setBodyParts(['all', ...bodyPartsData]);
     };
-    fetchExercisesData();
+    // fetchExercisesData();
   }, []);
 
   const handleSearch = async () => {

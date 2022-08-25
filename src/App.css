@@ -32,11 +32,6 @@ body {
   transition: 0.3s all ease-in-out;
 }
 
-.bodyPart-card:hover {
-  transform: scale(1.1, 1.1);
-}
-
-
 .right-arrow,
 .left-arrow {
   cursor: pointer;
@@ -71,6 +66,29 @@ body {
   flex-wrap: wrap;
 }
 
+.exercise-card {
+  width: 400px;
+  height: 445px;
+  background: #fff;
+  border-top: 4px solid #ff2625;
+  border-bottom-left-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 10px;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+}
+
+.exercise-card img {
+  height: 326px;
+}
+
+.exercise-card:hover,
+.bodyPart-card:hover {
+  transform: scale(1.1, 1.1);
+}
 
 @media screen and (max-width: 1200px) {
   .hero-banner-img {
@@ -83,5 +101,14 @@ body {
   .left-arrow,
   .right-arrow {
     position: static !important;
+  }
+  .exercise-card {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .exercise-card {
+    width: 280px;
   }
 }
